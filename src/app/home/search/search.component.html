@@ -1,1 +1,16 @@
-<p>search works!</p>
+<div class="imageContainer">
+    <div id="logo"><b>D!</b></div>
+    <div class="heading">
+        {{ title }}
+    </div>
+
+    <div class="locationSelector">
+        <select name="" class="locationDropDown">
+            <option value="">-----SELECT LOCATION-----</option>
+            <option [value]="loc.city" *ngFor="let loc of locations">{{ loc.city_name }}</option>
+        </select>
+        <select name="" class="hotelDropDown">
+            <option value="">-----SELECT HOTEL-----</option>
+        </select>
+    </div>
+</div>
