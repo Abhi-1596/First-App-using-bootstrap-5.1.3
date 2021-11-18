@@ -1,1 +1,25 @@
-<p>quick-search works!</p>
+<div class="quickSearchContainer">
+    <p class="quickSearchHeading">
+        Quick Search
+    </p>
+    <p class="quickSearchSubHeading">
+        Discover your trip with us
+    </p>
+    <br>
+    <a *ngFor="let hotelType of hotelTypes">
+        <div class="tileContainer">
+            <div class="tileComponent1">
+                <img [src]="hotelType.image" class="rounded img-fluid">
+            </div>
+            <div class="tileComponent2">
+                <div class="componentHeading">
+                    {{ hotelType.name | uppercase }}
+                </div>
+                <div class="componentSubHeading">
+                    Start Your {{ hotelType.name | lowercase }} Trip With Us.
+                    <p>As low cost of {{ hotelType.cost | currency: "INR" }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
